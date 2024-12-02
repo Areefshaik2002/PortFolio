@@ -3,143 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaik Areef - Portfolio</title>
-    <link rel="stylesheet" href="./portfolio.css">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/cb04be051e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <center>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="hero">
-        <h1>Hello, I'm <span>Shaik Areef</span></h1>
-        <p>Software and Web Developer</p>
-        <a href="#contact" class="btn">Get in Touch</a>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-container">
-            <img src="passsportsizephoto.jpg" alt="Shaik Areef" class="profile-pic">
-            <p>I am Shaik Areef, a passionate software and web developer with a strong foundation in creating robust and scalable applications. With a knack for solving complex problems and an eye for detail, I constantly strive to improve and innovate. My dedication to learning new technologies and my ability to adapt quickly make me a valuable asset to any team.</p>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" alt="logo" width="6%">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Full stack developer</p>
+                <h1>Hii, I am <span>Areef shaik</span> <br>from Andhra Pradesh, India.</h1>
+            </div>
         </div>
-    </section>
+    </div>
+    <!-- about -->
+     <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/passportsizephoto.jpeg" alt="aboutphoto" width="30%">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-p">Passionate and detail-oriented developer with a strong foundation in Java, front-end technologies,  and database management. Eager to apply problem-solving skills and technical expertise to build efficient, scalable, and user-centric applications. Seeking a dynamic role to contribute to innovative projects while continuously enhancing my development skills.</p>
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="education-item">
-            <h3>Bachelor of Technology in Electrical and Electronics Engineering</h3>
-            <h4>Vasireddy Venkatadri Institute of Technology, Nambur</h4>
-            <p>Graduation Year: 2024</p>
-            <p>Throughout my Bachelor of Technology in Computer Science, I developed a strong foundation in both theoretical and practical aspects of computing. My coursework covered essential topics such as Algorithms, Data Structures, Database Management, and Software Engineering. I excelled in projects related to software development, where I applied my skills in programming languages such as Java and JavaScript. My education also included hands-on experience with modern frameworks and technologies, preparing me to tackle complex software challenges and innovate in the tech industry.</p>
-
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experiance')">Experiance</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>software development</span><br>Building software web applications</li>
+                                <li><span>Web development</span><br>Building web sites</li>
+                                <li><span>Knows:</span><br>Html&css, Javascript,React js <br><br>Java programming, MySQL, JDBC, Servlets & JSP<br> <br>
+                                Hibernate ORM, Spring framework, Spring Boot <br><br>
+                                ReST API, Design patterns, SDLC. </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experiance">
+                            <ul>
+                                <li><span>Full stack java development</span><br>Trainee | June 2024 - present</li>
+                                <li>• Developed web applications using Java, Spring, and Hibernate for scalable web services.
+                                </li>
+                                <li>• Designed RESTful APIs, improving server response times by 30%.
+                                </li>
+                                <li>• Debugged and resolved critical application issues, enhancing system reliability.
+                                </li>
+                                <li><span>Full stack Web development</span><br>Intern ] Feb 2023 - May 2023</li>
+                                <li>• Spearheaded front-end development using React.js, improving user engagement.
+                                </li>
+                                <li>• Integrated REST APIs to enable dynamic content updates across multiple components.
+                                </li>
+                                <li>• Optimized database queries and back-end logic, reducing response time.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Btech</span><br>Electrical and Electronics Engineering | 2020 - 2024 | 8.08CGPA</li>
+                                <li><span>Intermediate(10+2)</span><br>MPC | 2018 - 2020 | 9.53CGPA</li>
+                                <li><span>SSC</span><br>2017 - 2018 | 9.7GPA 
+                             </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
         </div>
-        <!-- Add more education items if necessary -->
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Java, SQL, JavaScript</li>
-            <li>MS Office, VS Code, Eclipse</li>
-            <li>Data Structures and Algorithms</li>
-            <li>Bootstrap, Spring Framework, Hibernate</li>
-            <li>SDLC, APIs and Web Services</li>
-            <li>Version Control, Full Stack Development</li>
-            <li>Spring Boot, React.js</li>
-        </ul>
-    </section>
-
-   
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Dragon Game</h3>
-            <p>Developed a fun and engaging game where a dino must jump over an approaching dragon. Built using HTML, CSS, and JavaScript, featuring real-time collision detection and score tracking. This project demonstrates my ability to create interactive and engaging user experiences, focusing on responsive design and smooth performance.</p>
+     </div>
+     <!--------- Services  ----------->
+     <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>web designing</h2>
+                    <p>As a freelance web designer, I create modern, responsive, and user-friendly websites tailored to your unique needs. With expertise in HTML, CSS, JavaScript, and ReactJS, I ensure your brand shines online. My focus is on delivering affordable, high-quality designs that enhance user experiences. Let’s transform your vision into a stunning website!</p>
+                    <a href="https://github.com/Areefshaik2002/web-designing">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>software development</h2>
+                    <p>
+                        As a freelance software developer, I specialize in building efficient, scalable, and robust applications tailored to your requirements. With expertise in Java, Spring Boot, Hibernate, and REST APIs, I deliver innovative solutions for both web and backend systems. My focus is on quality, reliability, and meeting your business goals. Let’s bring your ideas to life!</p>
+                        <a href="https://github.com/Areefshaik2002?tab=repositories">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>web applications</h2>
+                    <p>I design and develop dynamic, user-friendly web applications tailored to your needs. With expertise in HTML, CSS, JavaScript, React, and Spring Boot, I create seamless, responsive, and scalable solutions. My goal is to deliver web applications that enhance user experience and drive business growth. Let’s build your digital presence together!</p>
+                    <a href="https://github.com/Areefshaik2002/RestaurantManagementSystem-SpringBoot">Learn more</a>
+                </div>
+            </div>
         </div>
-        <div class="project">
-            <h3>To-Do List</h3>
-            <p>A practical to-do list application allowing users to add, complete, and delete tasks. Built with HTML, CSS, and JavaScript, featuring task persistence using local storage. The project showcases my attention to detail, user-centric design, and commitment to creating functional yet aesthetically pleasing web applications.</p>
+     </div>
+     <!-------- portfolio -------->
+     <div id="portfolio">
+        <div class="container">
+            <div class="sub-title">My Work</div>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/restaurant.jpg"  alt="">
+                    <div class="layer">
+                        <h3>Restaurant Management system web App</h3>
+                         <p>The Restaurant Management Web App simplifies restaurant operations by managing menus, orders, and customer data efficiently. It ensures secure access and streamlines daily tasks for improved productivity.</p> 
+                        <a href="https://drive.google.com/file/d/1q0npuKYw1SbE0h4_FCcZKXvanJVPRnVX/view?usp=drive_link"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/E commerce.jpg" alt="">
+                    <div class="layer">
+                        <h3>E-commerce web store </h3>
+                         <p>The E-commerce Web Store's front-end provides a visually appealing and user-friendly interface, enabling customers to browse products and navigate the site effortlessly. It focuses on delivering an intuitive shopping experience.</p> 
+                        <a href="https://areefshaik2002.github.io/E-commerce/"><i class="fa-solid fa-up-right-from-square"></i></i>
+                        </a>
+                        </div>
+                </div>
+                <div class="work">
+                    <img src="images/calculator.jpg" alt="">
+                    <div class="layer">
+                        <h3>online calculator</h3>
+                         <p> The Calculator application provides a sleek and responsive interface for performing basic arithmetic operations, designed for ease of use and quick calculations.</p> 
+                         <a href=" https://areefshaik2002.github.io/Calculator-website/"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
         </div>
-        <div class="project">
-            <h3>Paytm Website Landing Page Clone</h3>
-            <p>A clone of the Paytm landing page built with HTML and CSS, replicating the layout, styling, and responsiveness of the original site. This project highlights my ability to closely follow design patterns and create pixel-perfect replicas that are both visually appealing and highly functional.</p>
+     </div>
+     <!------ Contact ------->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>Areefshaik2002@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>9398479810</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="images/Areef shaik resume november 23.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
         </div>
-        <div class="project">
-            <h3>E-Commerce Website Clone</h3>
-            <p>Developed a clone of an e-commerce website featuring product listings, shopping cart, and checkout process. Built using HTML, CSS, and JavaScript, this project reflects my comprehensive understanding of full-stack development, from front-end design to back-end integration, ensuring a seamless user experience.</p>
+        <div class="copyright">
+            <p>© 2024 Areef Shaik. All rights reserved. Unauthorized use or reproduction of this website's content is prohibited.</p>
         </div>
-    </section>
+     </div>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <h3>Full Stack Java Developer Trainee</h3>
-            <h4>Codegnan IT Solutions, Vijayawada</h4>
-            <p>June 2024 – Present</p>
-            <ul>
-                <li>Developed and maintained robust web applications using Java, Spring, and Hibernate.</li>
-                <li>Designed and implemented RESTful APIs for scalable web services.</li>
-                <li>Collaborated with cross-functional teams to deliver new features.</li>
-                <li>Enhanced problem-solving through complex application development.</li>
-            </ul>
-        </div>
-        <div class="experience-item">
-            <h3>Full Stack Web Developer Trainee</h3>
-            <h4>Devtown</h4>
-            <p>Feb 2023 – May 2023</p>
-            <ul>
-                <li>Engineered a web platform for managing student information and class scheduling.</li>
-                <li>Boosted user engagement through enhanced real-time messaging features.</li>
-                <li>Utilized Java, SQL, HTML, CSS, JavaScript, and Spring Boot for scalable solutions.</li>
-            </ul>
-        </div>
-    </section>
 
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <ul>
-            <li>Full Stack Java Development - Codegnan</li>
-            <li>Java Programming - Mindlusters</li>
-            <li>Full Stack Web Development - Devtown</li>
-            <li>CSS Basics - HackerRank</li>
-        </ul>
-    </section>
 
-    <section id="achievements">
-        <h2>Achievements</h2>
-        <ul>
-            <li>Attended Full Stack Web Development workshop at IIT Madras, gaining insights from industry leaders.</li>
-            <li>Completed a rigorous AI Tools workshop at Be10x, expanding my knowledge in AI-driven solutions.</li>
-            <li>Actively participated as an NSS volunteer in the BCDE program at my college, contributing to community development.</li>
-            <li>Received recognition for outstanding project work during my internship at Codegnan IT Solutions.</li>
-        </ul>
-    </section>
+     <!-- JavaScript -->
+     <Script>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Phone: 9398479810</p>
-        <p>Email: <a href="mailto:areefshaik2002@gmail.com">areefshaik2002@gmail.com</a></p>
-        <p>Location: Tadikonda, Andhra Pradesh, 522236</p>
-        <p><a href="https://github.com/Areefshaik2002" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/areef-shaik-3bb988211/" target="_blank">LinkedIn</a></p>
-    </section>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
 
-    <footer>
-        <p>&copy; 2024 Shaik Areef. All rights reserved.</p>
-    </footer>
-    </center>
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");    
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");    
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+     </Script>
+
+     <script>
+
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+
+     </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx2qD7d05LLMTCzAAUr8B0HiI-j0ZIBpi-20wiUv4k2HU6jkncQD5LjzvLzaETjpyPQoQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent!!!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    
 </body>
 </html>
